@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Box UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --cyan: #00F0EC;
+            --blue: #005CF0;
+            --light-blue: #00A8F0;
+            --green: #00F09A;
+            --deep-blue: #0010F0;
+            --background: #E7EEF1;
+        }
+        body {
+            background-color: var(--background);
+            background-image: url('http://www.transparenttextures.com/patterns/felt.png');
+            background-repeat: repeat;
+            background-size: auto;
+        }
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr); /* 2 boîtes par ligne */
+            grid-template-rows: auto;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--deep-blue);
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--blue);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6 flex-col">
+
+    <!-- Titre et sous-titre -->
+    <div class="header">
+        <h1 class="title">Hestia</h1>
+        <p class="subtitle">La technologie au service de votre foyer : pilotez, surveillez et optimisez votre maison en toute simplicité !</p>
+    </div>
+
+    <!-- Grille des boîtes -->
+    <div class="grid-container">
+        <!-- Carte 1 -->
+        <div class="card bg-[var(--cyan)]">
+            <h2 class="text-white text-xl font-bold">Comment Faire ?</h2>
+            <p class="text-white mt-2">Il suffit de suivre la carte !</p><br>
+            <iframe src="https://app.milanote.com/1SYvXi1m8f5685?p=4esXTcAQf37" width="600" height="350" frameborder="0"></iframe>
+        </div>
+
+        <!-- Carte 2 (avec plus de texte) -->
+        <div class="card bg-[var(--blue)]">
+            <h2 class="text-white text-xl font-bold">Une application pour les contrôler tous !</h2>
+            <p class="text-white mt-2">
+                Hestia a été créer grâce à Home Assistant, une plateforme open-source pour la gestion et l'automatisation des objets connectés 
+                dans une maison intelligente. Home Assistant communique avec les appareils via différents protocoles comme Wi-Fi, Z-Wave, Zigbee, MQTT, et le Bluetooth.<br>
+            <br>Une fois installé, il détecte et contrôle les appareils via des intégrations spécifiques pour chaque type d'appareil (ampoules, thermostats, caméras, etc.). 
+                Home Assistant permet de créer des automatisations pour agir automatiquement selon des conditions (ex. allumer la lumière lorsque la température est basse).
+                Il offre une interface web pour configurer et surveiller les appareils en temps réel, tout en permettant une gestion locale et privée des données. 
+                Il suffit ensuite de configurer ses appareils ou de les créer. On peux ensuite tout contrôler en une seul application disponible sur Android et Iphone et même sur pc grâce
+                au site web intégrer.
+            </p>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="card bg-[var(--light-blue)]">
+            <h2 class="text-white text-xl font-bold">Qui sommes nous ?</h2>
+            <p class="text-white mt-2">Nous sommes Cristiano, 15 ans, et Romain, 14 ans, et nous avons eu la chance de créer notre propre box domotique grâce à un projet passionnant que nous avons appelé Hestia. Ce projet a vu le jour avec l'aide du financement de notre collège, le collège Romain Blache à Saint-Cyr-sur-Mer, et nous sommes extrêmement fiers de ce que nous avons accompli.<br>
+<br>
+                Hestia est une box domotique qui repose sur Home Assistant, une plateforme de gestion de la maison intelligente. Nous avons imaginé cette solution pour rendre les maisons plus modernes, plus intelligentes et plus efficaces. Grâce à l'utilisation de capteurs, d'équipements connectés et de l'interface de Home Assistant, nous avons réussi à créer un système qui permet de contrôler la lumière, la température, la sécurité et bien d'autres aspects de la maison, directement depuis un seul appareil.<br>
+<br>                
+                Mais pour rendre notre projet plus concret, nous avons également conçu une maquette de notre box. Cette maquette permet de visualiser comment le système fonctionne et montre son potentiel. Grâce à cette présentation, nous avons pu démontrer de manière interactive et visuelle le fonctionnement de notre box domotique et la façon dont elle peut améliorer le quotidien des utilisateurs.<br>
+            </p>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="card bg-[var(--green)]">
+            <h2 class="text-white text-xl font-bold">Mais ça marche vraiment ?</h2>
+            <p class="text-white mt-2">
+                Pour savoir, regardez la présentation !
+            </p><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=s5_OecvVCRRVLd2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
